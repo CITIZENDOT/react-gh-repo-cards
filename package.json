@@ -2,6 +2,17 @@
   "name": "react-gh-repo-cards",
   "version": "1.0.0",
   "description": "Near perfect github repo cards!",
+  "homepage": "https://citizendot.github.io/react-gh-repo-cards/",
+  "bugs": {
+    "url": "https://github.com/CITIZENDOT/react-gh-repo-cards/issues"
+  },
+  "keywords": [
+    "github",
+    "cards",
+    "github-repo",
+    "react",
+    "repo"
+  ],
   "author": "CITIZENDOT",
   "license": "MIT",
   "repository": "CITIZENDOT/react-gh-repo-cards",
