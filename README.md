@@ -1,20 +1,20 @@
 # react-gh-repo-cards
 
+[![NPM Version](https://img.shields.io/npm/v/react-gh-repo-cards.svg?style=flat)](https://www.npmjs.com/package/react-gh-repo-cards) [![](https://img.shields.io/npm/dm/react-gh-repo-cards.svg?style=flat)](https://www.npmjs.com/package/react-gh-repo-cards)
+
 Perfect github repo cards!
 
-## Install
+## Installation
 
 ```bash
 npm install react-gh-repo-cards # npm
-```
-
-```bash
 yarn add react-gh-repo-cards # yarn
 ```
 
 ## Features
 
 - **NO** external dependencies.
+- Oh, Did I say, it's responsive? Yes it is! Just drop this component wherever you want, And it tries it's best to fit itself there.
 - Looks exactly same as GitHub pinned repository cards (including hyper-links).
 - Simple to use.
 
