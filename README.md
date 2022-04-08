@@ -49,6 +49,24 @@ const Cards = () => {
 export default Cards;
 ```
 
+You can also show repos by different users, by omitting the `user` prop, and just writing every repo as `user/repo`
+
+```jsx
+import RepoCards from "react-gh-repo-cards";
+import "react-gh-repo-cards/dist/index.css";
+
+const Cards = () => {
+  return (
+    <RepoCards
+      repos={["CITIZENDOT/Leetcode-Visualizer", "CITIZENDOT/gh-info", "FdelMazo/BobbyFissue", "FdelMazo/ConstitucionArgentina"]}
+    />
+  );
+};
+
+export default Cards;
+```
+
+
 ## License
 
 MIT © [Appaji](https://github.com/CITIZENDOT)

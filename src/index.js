@@ -13,20 +13,26 @@ export default ({
 }) => {
   return (
     <div className={styles["row"]}>
-      {repos.map((repo) => (
-        <div
-          className={[
-            styles["padding-left"],
-            styles["padding-right"],
-            styles["col-12"],
-            styles["col-md-6"],
-            styles["col-lg-6"],
-            styles["mb-3"],
-          ].join(" ")}
-        >
-          <RepoCard user={user} repo={repo} Loading={Loading} Error={Error} />
-        </div>
-      ))}
+      {repos.map((repo) => {
+        // If the user prop isn't passed, then we assume the component user
+        // knows what they are doing and wrote the repo as `user/repo`.
+        const [repoUser = "", repoName = ""] = repo.split("/");
+
+        return (
+          <div
+            className={[
+              styles["padding-left"],
+              styles["padding-right"],
+              styles["col-12"],
+              styles["col-md-6"],
+              styles["col-lg-6"],
+              styles["mb-3"],
+            ].join(" ")}
+          >
+            <RepoCard user={user ? user : repoUser} repo={user ? repo : repoName} fullTitle={!user} Loading={Loading} Error={Error} />
+          </div>
+        )
+      })}
     </div>
   );
 };
@@ -47,7 +53,7 @@ const DefaultError = () => {
   );
 };
 
-const RepoCard = ({ user, repo, Loading, Error }) => {
+const RepoCard = ({ user, repo, fullTitle, Loading, Error }) => {
   const [loading, setLoading] = React.useState(true);
   const [data, setData] = React.useState("");
   const [error, setError] = React.useState("");
@@ -78,7 +84,7 @@ const RepoCard = ({ user, repo, Loading, Error }) => {
           target="blank"
           href={`https://github.com/${user}/${repo}`}
         >
-          {repo}
+          {fullTitle ? `${user}/${repo}` : repo}
         </a>
       </div>
       <p className={[styles["mt-2"], styles["mb-3"]].join(" ")}>
