@@ -37,8 +37,28 @@ import "react-gh-repo-cards/dist/index.css";
 const Cards = () => {
   return (
     <RepoCards
-      user="CITIZENDOT"
-      repos={["Leetcode-Visualizer", "gh-info", "TestCode", "VCPicker"]}
+      repoDetails={[
+        {
+          user: "FdelMazo",
+          repoName: "yamerecibi",
+          showFullTitle: true,
+        },
+        {
+          user: "CITIZENDOT",
+          repoName: "gh-info",
+          showFullTitle: true,
+        },
+        {
+          user: "CITIZENDOT",
+          repoName: "TestCode",
+          showFullTitle: false
+        },
+        {
+          user: "CITIZENDOT",
+          repoName: "VCPicker",
+          showFullTitle: false,
+        },
+      ]}
     />
   );
 };
@@ -66,8 +86,28 @@ yarn add react-gh-repo-cards # yarn`;
         </sub>
       </h1>
       <RepoCards
-        user="CITIZENDOT"
-        repos={["Leetcode-Visualizer", "gh-info", "TestCode", "VCPicker"]}
+        repoDetails={[
+          {
+            user: "FdelMazo",
+            repoName: "yamerecibi",
+            showFullTitle: true,
+          },
+          {
+            user: "CITIZENDOT",
+            repoName: "gh-info",
+            showFullTitle: true,
+          },
+          {
+            user: "CITIZENDOT",
+            repoName: "TestCode",
+            showFullTitle: false
+          },
+          {
+            user: "CITIZENDOT",
+            repoName: "VCPicker",
+            showFullTitle: false,
+          },
+        ]}
       />
       <div
         style={{

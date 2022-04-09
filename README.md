@@ -24,8 +24,7 @@ There are two props **`Loading`**, **`Error`** components to over-ride default c
 
 ```jsx
 <RepoCards
-  user="CITIZENDOT"
-  repos={["Leetcode-Visualizer", "gh-info", "TestCode", "VCPicker"]}
+  repoDetails={...}
   Loading={CustomLoadingComponent}
   Error={CustomErrorComponent}
 />
@@ -40,32 +39,34 @@ import "react-gh-repo-cards/dist/index.css";
 const Cards = () => {
   return (
     <RepoCards
-      user="CITIZENDOT"
-      repos={["Leetcode-Visualizer", "gh-info", "TestCode", "VCPicker"]}
+      repoDetails={[
+        {
+          user: "FdelMazo",
+          repoName: "yamerecibi",
+          showFullTitle: true,
+        },
+        {
+          user: "CITIZENDOT",
+          repoName: "gh-info",
+          showFullTitle: true,
+        },
+        {
+          user: "CITIZENDOT",
+          repoName: "TestCode",
+          showFullTitle: false,
+        },
+        {
+          user: "CITIZENDOT",
+          repoName: "VCPicker",
+          showFullTitle: false,
+        },
+      ]}
     />
   );
 };
 
 export default Cards;
 ```
-
-You can also show repos by different users, by omitting the `user` prop, and just writing every repo as `user/repo`
-
-```jsx
-import RepoCards from "react-gh-repo-cards";
-import "react-gh-repo-cards/dist/index.css";
-
-const Cards = () => {
-  return (
-    <RepoCards
-      repos={["CITIZENDOT/Leetcode-Visualizer", "CITIZENDOT/gh-info", "FdelMazo/BobbyFissue", "FdelMazo/ConstitucionArgentina"]}
-    />
-  );
-};
-
-export default Cards;
-```
-
 
 ## License
 
