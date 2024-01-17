@@ -2,6 +2,9 @@
 
 [![NPM Version](https://img.shields.io/npm/v/react-gh-repo-cards.svg?style=flat)](https://www.npmjs.com/package/react-gh-repo-cards) [![](https://img.shields.io/npm/dm/react-gh-repo-cards.svg?style=flat)](https://www.npmjs.com/package/react-gh-repo-cards)
 
+![image](https://github.com/CITIZENDOT/react-gh-repo-cards/assets/52322531/0e0b69dd-267c-4f3d-8295-9e69abf46446)
+
+
 Perfect github repo cards!
 
 ## Installation
